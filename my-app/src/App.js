@@ -4,8 +4,14 @@ import Product from './components/Product';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
+
+
+    onAddProduct = ()=> {
+        alert(this.refs.name.value);
+        console.log(this.refs.name);
+    }
+    render() {
+        return (
         <div>
    
             <nav className="navbar navbar-inverse">
@@ -14,7 +20,16 @@ class App extends Component {
                   
               </div>
             </nav>
-
+            <div className="panel panel-default">
+                <div className="panel-body">
+                    
+                        <div className="form-group">
+                            <input type="text" className="form-control" ref="name"/>
+                        </div>
+            
+                        <button type="submit" className="btn btn-primary" onClick={this.onAddProduct}>Submit</button>
+                </div>
+            </div>
             <div className="container">
               <div className="row">
                 <div className="row">
