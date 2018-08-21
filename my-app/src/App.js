@@ -7,6 +7,17 @@ import TaskList from './components/TaskList';
 import './App.css';
 
 class App extends Component {
+    // {
+    //     isDisplayForm,
+    //     keyword,
+    //     filterName,
+    //     filterStates,
+    //     itemEditing,
+    //     sortBy,
+    //     sortValue
+    // } = this.state;
+
+
     render() {
     return (
 

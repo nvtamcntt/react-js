@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import TaskItem from './TaskItem';
+import { connect } from 'react-redux'
+
+/*các state của store sẽ chuyển thành các props của components......*/
 class TaskList extends Component {
+
   render() {
+    console.log(this.props.todos);
     return (
           <div>
               <table className="table table-bordered table-hover">
@@ -39,4 +44,10 @@ class TaskList extends Component {
   }
 }
 
-export default TaskList;
+const mapStateToProps = (state) => {
+  return {
+    todos : state.tasks 
+  }
+} 
+
+export default connect(mapStateToProps, null)(TaskList);
